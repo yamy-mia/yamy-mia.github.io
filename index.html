@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mia Zhang — Cross-border e-commerce, global sales, AI workflows, and practical experiments." />
+  <title>Mia Zhang — E-commerce, Sales & AI</title>
+  <style>
+    :root{
+      --bg:#f6f2ea;
+      --paper:#fffdf8;
+      --ink:#222222;
+      --muted:#6d6a64;
+      --line:#d9d3c8;
+      --accent:#2e5b50;
+      --accent-soft:#dfe9e5;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(46,91,80,.08), transparent 26rem),
+        radial-gradient(circle at 8% 72%, rgba(141,121,90,.08), transparent 24rem),
+        var(--bg);
+      color:var(--ink);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.65;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max), calc(100% - 40px));margin:auto}
+    nav{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:blur(10px);
+      background:rgba(246,242,234,.82);
+      border-bottom:1px solid rgba(217,211,200,.75);
+    }
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      min-height:68px;gap:24px;
+    }
+    .brand{font-weight:700;letter-spacing:.01em}
+    .nav-links{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+    .nav-links a:hover{color:var(--ink)}
+    header{padding:110px 0 80px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:9px;
+      font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+      color:var(--accent);font-weight:700;
+    }
+    .eyebrow:before{content:"";width:34px;height:1px;background:var(--accent)}
+    h1{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(54px,9vw,106px);
+      line-height:.95;margin:20px 0 26px;letter-spacing:-.05em;
+      font-weight:500;
+    }
+    .hero-copy{max-width:760px;font-size:clamp(19px,2.3vw,27px);color:#44413d}
+    .motto{
+      margin-top:34px;padding-left:18px;border-left:2px solid var(--accent);
+      font-family:Georgia, "Times New Roman", serif;font-style:italic;
+      font-size:18px;color:#504d48;
+    }
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 18px;border-radius:999px;border:1px solid var(--ink);
+      font-size:14px;font-weight:650;transition:.2s ease;
+    }
+    .btn.primary{background:var(--ink);color:white}
+    .btn:hover{transform:translateY(-1px)}
+    section{padding:74px 0;border-top:1px solid var(--line)}
+    .section-grid{display:grid;grid-template-columns:240px 1fr;gap:56px}
+    .section-label{
+      font-size:13px;text-transform:uppercase;letter-spacing:.1em;
+      color:var(--muted);font-weight:700;padding-top:7px;
+    }
+    h2{
+      font-family:Georgia, "Times New Roman", serif;font-weight:500;
+      font-size:clamp(34px,5vw,54px);line-height:1.1;margin:0 0 24px;
+      letter-spacing:-.03em;
+    }
+    .lead{font-size:19px;color:#46433f;max-width:760px}
+    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+    .chip{
+      border:1px solid var(--line);border-radius:999px;padding:7px 11px;
+      background:rgba(255,253,248,.65);font-size:13px;color:#55514c;
+    }
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+    .card{
+      background:rgba(255,253,248,.78);border:1px solid var(--line);
+      border-radius:20px;padding:26px;min-height:230px;
+      display:flex;flex-direction:column;justify-content:space-between;
+    }
+    .card .tag{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--accent);font-weight:750}
+    .card h3{font-size:25px;margin:14px 0 10px;line-height:1.2}
+    .card p{margin:0;color:var(--muted)}
+    .card .meta{margin-top:26px;font-size:13px;color:#77736d}
+    .writing{
+      background:var(--paper);border:1px solid var(--line);border-radius:24px;
+      padding:34px;margin-top:26px;
+    }
+    .writing h3{
+      font-family:Georgia, "Times New Roman", serif;font-size:34px;
+      line-height:1.15;margin:0 0 16px;font-weight:500;
+    }
+    .writing p{max-width:820px;color:#55514c}
+    .quote{
+      margin:24px 0 0;padding:18px 20px;background:var(--accent-soft);
+      border-radius:14px;font-weight:650;color:#284d45;
+    }
+    footer{padding:44px 0 70px;color:var(--muted);font-size:14px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media (max-width:760px){
+      .nav-links{display:none}
+      header{padding:80px 0 60px}
+      .section-grid{grid-template-columns:1fr;gap:18px}
+      .cards{grid-template-columns:1fr}
+      section{padding:58px 0}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Mia Zhang</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#connect">Connect</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="wrap">
+      <div class="eyebrow">Cross-border e-commerce · Global sales · AI</div>
+      <h1>Mia Zhang</h1>
+      <div class="hero-copy">
+        I explore how e-commerce, sales and AI can work together — and I build small tools when a better workflow does not exist yet.
+      </div>
+      <div class="motto">Meaningful work grows through genuine connections.</div>
+      <div class="actions">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/mia-zhang-ecommerce" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap section-grid">
+        <div class="section-label">About</div>
+        <div>
+          <h2>Learning from both sides of e-commerce.</h2>
+          <p class="lead">
+            I started in e-commerce operations, working with independent-site backends, content and day-to-day workflows. Moving into international sales gave me a different view: what customers actually ask, what makes them respond, and what information a website needs to make buying easier.
+          </p>
+          <p class="lead">
+            That mix has made me especially interested in practical AI: not automation for its own sake, but simple systems that remove repetitive work while keeping judgment and decision-making human.
+          </p>
+          <div class="chips">
+            <span class="chip">Cross-border E-commerce</span>
+            <span class="chip">International Sales</span>
+            <span class="chip">Independent Sites</span>
+            <span class="chip">AI Workflows</span>
+            <span class="chip">Lead Generation</span>
+            <span class="chip">Content Operations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap section-grid">
+        <div class="section-label">Projects</div>
+        <div>
+          <h2>Small tools built around real work.</h2>
+          <div class="cards">
+            <article class="card">
+              <div>
+                <div class="tag">Internal Sales Workspace</div>
+                <h3>CNN Sales</h3>
+                <p>
+                  A lightweight workspace built around my sales process: prospecting, organizing lead information, outreach, follow-ups and tracking. I use a semi-automated workflow that combines AI-assisted research with manual review.
+                </p>
+              </div>
+              <div class="meta">Built to make repetitive sales work easier — without automating every decision.</div>
+            </article>
+            <article class="card">
+              <div>
+                <div class="tag">Content Operations</div>
+                <h3>Blog Workbench</h3>
+                <p>
+                  A small internal workbench created while I was handling e-commerce operations. It brought parts of the blog workflow into one place and was later handed over to a new colleague taking on part of the content work.
+                </p>
+              </div>
+              <div class="meta">A practical tool that started as a solution to a daily workflow problem.</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="writing">
+      <div class="wrap section-grid">
+        <div class="section-label">Writing</div>
+        <div>
+          <h2>Notes from building and learning.</h2>
+          <article class="writing">
+            <div class="tag">AI · Sales · E-commerce</div>
+            <h3>I stopped trying to automate everything.</h3>
+            <p>
+              When I moved from e-commerce operations into sales, the problems changed — from content workflows to prospecting, lead organization, outreach and follow-ups. I built CNN Sales around that process, and initially assumed the best version would automate as much as possible.
+            </p>
+            <p>
+              In practice, research-heavy automation can mean more API calls, more cost and less visibility into what is happening. I found a better balance: use the AI tools I already subscribe to for research and analysis, review the output myself, then move the useful information into my workflow for execution and tracking.
+            </p>
+            <div class="quote">The goal isn't to automate everything. It's to automate the right things.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect">
+      <div class="wrap section-grid">
+        <div class="section-label">Connect</div>
+        <div>
+          <h2>Good work starts with good conversations.</h2>
+          <p class="lead">
+            I enjoy connecting with people working in e-commerce, global business, branding, sales and practical AI.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="https://www.linkedin.com/in/mia-zhang-ecommerce" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© 2026 Mia Zhang</span>
+      <span>Built as a living archive of work, ideas and experiments.</span>
+    </div>
+  </footer>
+</body>
+</html>
